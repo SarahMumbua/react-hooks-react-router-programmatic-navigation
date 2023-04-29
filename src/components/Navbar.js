@@ -1,13 +1,12 @@
-import React from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, useHistory } from 'react-router-dom';
 
 const linkStyles = {
-  width: "100px",
-  padding: "12px",
-  margin: "0 6px 6px",
-  background: "blue",
-  textDecoration: "none",
-  color: "white",
+  width: '100px',
+  padding: '12px',
+  margin: '0 6px 6px',
+  background: 'blue',
+  textDecoration: 'none',
+  color: 'white',
 };
 
 function Navbar({ setIsLoggedIn }) {
@@ -15,20 +14,17 @@ function Navbar({ setIsLoggedIn }) {
 
   function handleLogout() {
     setIsLoggedIn(false);
-    history.push("/login");
+    history.push('/login');
   }
 
   return (
     <div>
       <NavLink
         to="/"
-        /* set exact so it knows to only set activeStyle when route is deeply equal to link */
         exact
-        /* add styling to Navlink */
         style={linkStyles}
-        /* add prop for activeStyle */
         activeStyle={{
-          background: "darkblue",
+          background: 'darkblue',
         }}
       >
         Home
@@ -38,7 +34,7 @@ function Navbar({ setIsLoggedIn }) {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+          background: 'darkblue',
         }}
       >
         About
@@ -48,7 +44,7 @@ function Navbar({ setIsLoggedIn }) {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+          background: 'darkblue',
         }}
       >
         Login
